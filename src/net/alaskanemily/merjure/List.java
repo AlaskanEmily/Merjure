@@ -34,9 +34,9 @@ public class List<E> implements ISeq {
     
     // Used in the constructors to get the size of existing lists.
     // All other operations change this by a known amount.
-    static private int calculateSize(list.List_1<E> list){
+    static private <F> int calculateSize(list.List_1<F> list){
         int size = 0;
-        list.List_1<E> counting_list = list;
+        list.List_1<F> counting_list = list;
         while(!list.is_empty(counting_list)){
             size++;
             counting_list = list.det_tail(counting_list);
@@ -107,7 +107,7 @@ public class List<E> implements ISeq {
             while(!list.is_empty(counting_list)){
                 
                 final E object = list.det_head(counting_list);
-                final E other_object = (E)other_sequence.first();
+                final Object other_object = other_sequence.first();
                 
                 if(!object.equals(other_object)){
                     return false;
