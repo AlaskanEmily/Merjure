@@ -50,7 +50,7 @@ public class List<E> implements ISeq {
     }
     
     public List(){
-        m_list = null
+        m_list = null;
         m_size = 0;
     }
     
