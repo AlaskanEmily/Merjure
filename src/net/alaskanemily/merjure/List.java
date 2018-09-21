@@ -71,9 +71,7 @@ public class List<E> implements ISeq {
     }
     
     public ISeq more(){
-        if(m_size == 0)
-            return new List<E>();
-        else if(m_size == 1)
+        if(m_size <= 1)
             return new List<E>();
         else
             return new List<E>(list.det_tail(m_list), m_size-1);
