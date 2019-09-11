@@ -34,7 +34,7 @@ public class List<E> implements ISeq {
     
     final private list.List_1<E> m_list;
     static final private int INVALID_SIZE = -1;
-    final private int m_size; // Minor optimization, we can store the current size here.
+    private int m_size; // Minor optimization, we can store the current size here.
     
     // Used in the constructors to get the size of existing lists.
     // All other operations change this by a known amount.
